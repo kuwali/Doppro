@@ -24,6 +24,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.awasisto.doppro.MainActivity" />
         </activity>
+        <activity
+            android:name=".ParamActivity"
+            android:label="@string/title_activity_param"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.awasisto.doppro.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SimulatorActivity"
+            android:label="@string/title_activity_simulator"
+            android:parentActivityName=".ParamActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.awasisto.doppro.ParamActivity" />
+        </activity>
     </application>
 
 </manifest>
