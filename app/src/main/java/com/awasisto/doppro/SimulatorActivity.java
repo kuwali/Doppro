@@ -7,17 +7,23 @@ import android.view.MenuItem;
 
 
 public class SimulatorActivity extends ActionBarActivity {
-    private VehicleView vehicle;
+    private VehicleView sourceVehicle, observerVehicle;
 
-    public final int DIRECTION_APPROACHING = 0;
-    public final int DIRECTION_RECEDING = 1;
+    private int sourceFreq, sourseSpeed, observerSpeed, soundSpeed;
+    private String sourceDirection, observerDirection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simulator);
 
-
+        Bundle pass = getIntent().getExtras();
+        sourceFreq = pass.getInt("sourceFreq");
+        sourseSpeed = pass.getInt("soundSpeed");
+        observerSpeed = pass.getInt("observerSpeed");
+        soundSpeed = pass.getInt("soundSpeed");
+        sourceDirection = pass.getString("sourceDirection");
+        observerDirection = pass.getString("observerDirection");
     }
 
     @Override
@@ -40,9 +46,5 @@ public class SimulatorActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void launchSimulator() {
-
     }
 }

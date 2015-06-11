@@ -1,17 +1,38 @@
 package com.awasisto.doppro;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
+    CardView learnCard, simulateCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        learnCard = (CardView) findViewById(R.id.learnCard);
+        simulateCard = (CardView) findViewById(R.id.simulateCard);
+
+        learnCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LearnActivity.class));
+            }
+        });
+
+        simulateCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ParamActivity.class));
+            }
+        });
     }
 
     @Override

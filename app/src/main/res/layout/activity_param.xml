@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Source direction:"/>
+                    android:text="Observer direction:"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -98,6 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LAUNCH"
+                android:id="@+id/launchBtn"
                 android:layout_gravity="right"/>
 
         </LinearLayout>
