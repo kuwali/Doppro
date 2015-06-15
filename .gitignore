@@ -5,3 +5,6 @@
 .DS_Store
 /build
 /captures
+
+# windows thumbnail cache
+Thumbs.db
